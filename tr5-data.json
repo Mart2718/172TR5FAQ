@@ -7,7 +7,7 @@
       "id": "faq-1",
       "category": "conceptual",
       "question": "What is the unit circle, and why is it useful for finding trig values?",
-      "answer": "The unit circle is the circle of radius 1 centered at the origin. It's useful because for any angle θ drawn in standard position, the point where its terminal side crosses the unit circle has coordinates (cos θ, sin θ) — the x-coordinate IS the cosine, and the y-coordinate IS the sine. This turns trig values into something you can literally read off a picture, once you know where the terminal side lands.<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><line x1=\"150\" y1=\"150\" x2=\"236.6\" y2=\"100\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><circle cx=\"236.6\" cy=\"100\" r=\"5\" fill=\"#D4622A\"/><text x=\"242\" y=\"95\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">(cos &theta;, sin &theta;)</text><text x=\"175\" y=\"115\" font-size=\"11\" fill=\"#1a6b6b\" font-weight=\"600\">radius = 1</text></svg></div><p class=\"graph-caption\">The point where the terminal side meets the circle has coordinates (cos θ, sin θ).</p>"
+      "answer": "The unit circle is the circle of radius 1 centered at the origin. It's useful because for any angle θ drawn in standard position, the point where its terminal side crosses the unit circle has coordinates (cos θ, sin θ) — the x-coordinate IS the cosine, and the y-coordinate IS the sine. This turns trig values into something you can literally read off a picture, once you know where the terminal side lands.<div class=\"graph-wrap\"><svg viewBox=\"0 0 380 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><line x1=\"150\" y1=\"150\" x2=\"236.6\" y2=\"100\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><circle cx=\"236.6\" cy=\"100\" r=\"5\" fill=\"#D4622A\"/><text x=\"242\" y=\"95\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">(cos &theta;, sin &theta;)</text><text x=\"175\" y=\"115\" font-size=\"11\" fill=\"#1a6b6b\" font-weight=\"600\">radius = 1</text></svg></div><p class=\"graph-caption\">The point where the terminal side meets the circle has coordinates (cos θ, sin θ).</p>"
     },
     {
       "id": "faq-2",
@@ -130,6 +130,83 @@
       "category": "exact-values",
       "relatedFaqs": [
         "faq-12"
+      ]
+    },
+    {
+      "id": "vid-5",
+      "title": "Properties of Trig Functions: Domain, Range, and Sign in Each Quadrant",
+      "url": "https://www.youtube.com/watch?v=JPYyOcLNb_8",
+      "description": "An overview of how each trig function's sign changes across the four quadrants — the reasoning behind the ASTC pattern.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-4",
+        "faq-7",
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-6",
+      "title": "Determine the Quadrant of the Terminal Side Given Trig Function Signs",
+      "url": "https://www.youtube.com/watch?v=wlE1XM97EJc",
+      "description": "Working backward: given the signs of two trig functions, determine which quadrant the angle must be in.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-7",
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-7",
+      "title": "Determine Reference Angles of Angles Between 0 and 360 Degrees",
+      "url": "https://youtu.be/kJToPtSd5NY",
+      "description": "More practice finding reference angles across all four quadrants in degrees.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "vid-8",
+      "title": "Determine Reference Angles of Angles Given in Radians",
+      "url": "https://youtu.be/o__sU6aMAXU",
+      "description": "Practice finding reference angles when the angle is given in radians, including negative angles.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    },
+    {
+      "id": "vid-9",
+      "title": "Find Trigonometric Function Values for 0 Degrees or 0 Radians",
+      "url": "https://youtu.be/Dl05CJGjO2g",
+      "description": "Finding exact trig values for a quadrantal angle (on an axis rather than inside a quadrant) — a useful edge case.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-10",
+      "title": "Determine Trigonometric Function Values Using the Unit Circle",
+      "url": "https://www.youtube.com/watch?v=i56P6xzsB5Y",
+      "description": "Reading trig function values directly from coordinates on the unit circle.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "vid-11",
+      "title": "Find Sine, Cosine, and Tangent Values for 225 Degrees",
+      "url": "https://youtu.be/DTsx_k198t4",
+      "description": "A worked example in Quadrant III, pairing with the existing 120° (QII) and 210° (QIII) examples for broader quadrant coverage.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
       ]
     }
   ],
