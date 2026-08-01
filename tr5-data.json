@@ -1,0 +1,214 @@
+{
+  "section": "TR5",
+  "title": "The Unit Circle: Reference Angles and Exact Values",
+  "learningObjective": "Use reference angles, signs and definitions to determine exact values of trigonometric functions.",
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "conceptual",
+      "question": "What is the unit circle, and why is it useful for finding trig values?",
+      "answer": "The unit circle is the circle of radius 1 centered at the origin. It's useful because for any angle θ drawn in standard position, the point where its terminal side crosses the unit circle has coordinates (cos θ, sin θ) — the x-coordinate IS the cosine, and the y-coordinate IS the sine. This turns trig values into something you can literally read off a picture, once you know where the terminal side lands.<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><line x1=\"150\" y1=\"150\" x2=\"236.6\" y2=\"100\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><circle cx=\"236.6\" cy=\"100\" r=\"5\" fill=\"#D4622A\"/><text x=\"242\" y=\"95\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">(cos &theta;, sin &theta;)</text><text x=\"175\" y=\"115\" font-size=\"11\" fill=\"#1a6b6b\" font-weight=\"600\">radius = 1</text></svg></div><p class=\"graph-caption\">The point where the terminal side meets the circle has coordinates (cos θ, sin θ).</p>"
+    },
+    {
+      "id": "faq-2",
+      "category": "conceptual",
+      "question": "What is a reference angle?",
+      "answer": "The reference angle for any angle θ is the acute angle (always between 0° and 90°) formed between θ's terminal side and the nearest part of the x-axis. It's the shortcut that lets you reuse the special-angle values you already memorized in TR4 — no matter how large or which quadrant an angle is in, its reference angle is always one of the familiar 30°, 45°, or 60° family.<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#d4d4d8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"150\" x2=\"63.4\" y2=\"100\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><path d=\"M 115,150 A 35,35 0 0 0 119.7,132.5\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2\"/><text x=\"90\" y=\"140\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">30&deg;</text><text x=\"30\" y=\"90\" font-size=\"12\" fill=\"#0a3f52\" font-weight=\"700\">&theta; = 150&deg;</text></svg></div><p class=\"graph-caption\">For θ = 150° (Quadrant II), the reference angle is the 30° angle back to the nearest x-axis.</p>"
+    },
+    {
+      "id": "faq-3",
+      "category": "conceptual",
+      "question": "How do I find the reference angle for an angle in any quadrant?",
+      "answer": "The formula depends on which quadrant θ lands in, since the \"nearest x-axis\" is different each time.<div class=\"example-box\"><div class=\"label\">Reference Angle Formulas (θ in degrees)</div><p class=\"math-line\">Quadrant I: reference angle = θ</p><p class=\"math-line\">Quadrant II: reference angle = 180° &minus; θ</p><p class=\"math-line\">Quadrant III: reference angle = θ &minus; 180°</p><p class=\"math-line\">Quadrant IV: reference angle = 360° &minus; θ</p></div>"
+    },
+    {
+      "id": "faq-4",
+      "category": "conceptual",
+      "question": "Why do the six trigonometric functions have different signs in different quadrants?",
+      "answer": "Since sine and cosine come directly from the y- and x-coordinates on the unit circle (faq-1), their sign just follows whatever sign that coordinate has in that quadrant — x is negative in Quadrants II and III, y is negative in Quadrants III and IV. Every other trig function is built from sine and cosine (faq-6), so their signs are determined the same way, just inherited from whichever combination of x and y defines them."
+    },
+    {
+      "id": "faq-5",
+      "category": "conceptual",
+      "question": "How does the sign pattern for sine and cosine connect to reflections from FN4?",
+      "answer": "It's the exact same idea. An angle in Quadrant II is a horizontal reflection (across the y-axis) of its reference angle in Quadrant I — and just like f(&minus;x) flips the sign of the input, reflecting across the y-axis flips the sign of the x-coordinate, which is exactly why cosine becomes negative there. An angle in Quadrant IV is a vertical reflection (across the x-axis) of its reference angle, which flips the y-coordinate — exactly why sine becomes negative there instead. The sign rules in this section aren't a new idea to memorize from scratch; they're FN4's reflection rules, applied to the unit circle."
+    },
+    {
+      "id": "faq-6",
+      "category": "conceptual",
+      "question": "How are tangent, secant, cosecant, and cotangent defined in terms of sine and cosine (or x and y on the unit circle)?",
+      "answer": "All four remaining trig functions are built from sine and cosine — or equivalently, straight from the x and y coordinates on the unit circle.<div class=\"example-box\"><div class=\"label\">Definitions</div><p class=\"math-line\">\\( \\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = \\dfrac{y}{x} \\)</p><p class=\"math-line\">\\( \\sec\\theta = \\dfrac{1}{\\cos\\theta} = \\dfrac{1}{x} \\)</p><p class=\"math-line\">\\( \\csc\\theta = \\dfrac{1}{\\sin\\theta} = \\dfrac{1}{y} \\)</p><p class=\"math-line\">\\( \\cot\\theta = \\dfrac{\\cos\\theta}{\\sin\\theta} = \\dfrac{x}{y} \\)</p></div>"
+    },
+    {
+      "id": "faq-7",
+      "category": "sticking-points",
+      "question": "How do I determine the sign of a trig function value without a calculator?",
+      "answer": "Identify which quadrant the angle lands in, then check whether x and y are positive or negative in that quadrant (Quadrant I: both positive; Quadrant II: x negative, y positive; Quadrant III: both negative; Quadrant IV: x positive, y negative). Then apply that sign to whichever coordinate(s) the specific trig function is built from."
+    },
+    {
+      "id": "faq-8",
+      "category": "sticking-points",
+      "question": "How do I use a reference angle to find the exact value of a trig function for any angle?",
+      "answer": "Find the reference angle, look up the trig value for that reference angle using your TR4 special-angle values, then attach whatever sign is correct for the original angle's actual quadrant.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Find \\( \\sin(210°) \\).</p><p class=\"math-line\">210° is in Quadrant III: reference angle = 210°&minus;180° = 30°</p><p class=\"math-line\">\\( \\sin(30°) = \\dfrac{1}{2} \\) &nbsp;&nbsp; Quadrant III: sine is negative</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\sin(210°) = -\\dfrac{1}{2} \\)</p></div>"
+    },
+    {
+      "id": "faq-9",
+      "category": "sticking-points",
+      "question": "How do I find sin, cos, and tan for an angle beyond the first quadrant using reference angles?",
+      "answer": "Apply the exact same three-step process from faq-8 to each function separately: find the reference angle once, then look up sin, cos, and tan at that reference angle, and attach the correct sign for each one individually — since sine and cosine can have different signs from each other in a given quadrant, don't assume they'll match.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Find \\( \\sin, \\cos, \\tan \\) at \\( \\theta = 315° \\) (Quadrant IV, reference angle 45°)</p><p class=\"math-line\">\\( \\sin(315°) = -\\dfrac{\\sqrt{2}}{2} \\) (sine negative in QIV)</p><p class=\"math-line\">\\( \\cos(315°) = \\dfrac{\\sqrt{2}}{2} \\) (cosine positive in QIV)</p><p class=\"math-line\">\\( \\tan(315°) = -1 \\) (tangent negative in QIV)</p></div>"
+    },
+    {
+      "id": "faq-10",
+      "category": "sticking-points",
+      "question": "How do I find sec, csc, and cot once I already know sin, cos, and tan for an angle?",
+      "answer": "Take the reciprocal of the matching function — sec is the reciprocal of cos, csc is the reciprocal of sin, and cot is the reciprocal of tan. The sign never changes when you take a reciprocal (flipping a fraction doesn't flip its sign), so whatever sign sin, cos, or tan had, its reciprocal keeps that same sign.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">From faq-9: \\( \\cos(315°) = \\dfrac{\\sqrt{2}}{2} \\)</p><p class=\"math-line\">\\( \\sec(315°) = \\dfrac{1}{\\cos(315°)} = \\dfrac{2}{\\sqrt{2}} = \\sqrt{2} \\)</p></div>"
+    },
+    {
+      "id": "faq-11",
+      "category": "sticking-points",
+      "question": "What's a fast way to remember which trig functions are positive in each quadrant?",
+      "answer": "A common memory trick is \"All Students Take Calculus\" — one word per quadrant, going counterclockwise starting at Quadrant I. <strong>A</strong>ll (Quadrant I: all six functions positive), <strong>S</strong>ine (Quadrant II: only sine and its reciprocal cosecant positive), <strong>T</strong>angent (Quadrant III: only tangent and its reciprocal cotangent positive), <strong>C</strong>osine (Quadrant IV: only cosine and its reciprocal secant positive).<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"185\" y=\"105\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">All (+)</text><text x=\"80\" y=\"105\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Sine</text><text x=\"70\" y=\"200\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Tangent</text><text x=\"175\" y=\"200\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Cosine</text></svg></div><p class=\"graph-caption\">\"All Students Take Calculus\" — one positive family per quadrant, going counterclockwise from Quadrant I.</p>"
+    },
+    {
+      "id": "faq-12",
+      "category": "sticking-points",
+      "question": "How do I find the reference angle when the angle is given in radians instead of degrees?",
+      "answer": "Use the same quadrant logic as faq-3, just swap in the radian equivalents of the boundary angles: π instead of 180°, and 2π instead of 360°.<div class=\"example-box\"><div class=\"label\">Reference Angle Formulas (θ in radians)</div><p class=\"math-line\">Quadrant I: reference angle = θ</p><p class=\"math-line\">Quadrant II: reference angle = π &minus; θ</p><p class=\"math-line\">Quadrant III: reference angle = θ &minus; π</p><p class=\"math-line\">Quadrant IV: reference angle = 2π &minus; θ</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Example: \\( \\theta = \\dfrac{5\\pi}{6} \\) is in Quadrant II, so reference angle \\( = \\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6} \\)</p></div>"
+    },
+    {
+      "id": "faq-13",
+      "category": "connections",
+      "question": "How do TR1–TR4 connect to what we're doing here in TR5?",
+      "answer": "Every earlier trig section is a building block for this one. TR1 gave you standard position and radians, which is how every angle here gets described. TR2's coterminal angles explain why angles that look different can land in the exact same spot on the unit circle. TR3 defined the trig functions using right triangles, and TR4 gave you the exact values for 30°, 45°, and 60° — values you're now reusing constantly as reference angles, just with a sign attached depending on the quadrant."
+    },
+    {
+      "id": "faq-14",
+      "category": "connections",
+      "question": "Why does knowing exact trig values from reference angles matter for the rest of the course?",
+      "answer": "This skill is the foundation for graphing trig functions, solving trig equations, and working with inverse trig functions — all of which require you to move fluidly between an angle and its exact trig values without a calculator. Later, when you study trig identities and equations with multiple solutions, you'll constantly be asked \"for which angles does this trig function equal this value\" — which is exactly the reference-angle-and-sign process from this section, just run in reverse."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "Determine the Reference Angle for a Given Angle",
+      "url": "https://www.youtube.com/watch?v=YJNSRvhd3uA",
+      "description": "Worked examples finding the reference angle for angles sketched in standard position, across all four quadrants.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "vid-2",
+      "title": "Find Sine, Cosine, and Tangent Values for 120 Degrees",
+      "url": "https://www.youtube.com/watch?v=iyZa9p8v0BU",
+      "description": "Using a reference triangle and the unit circle to find sine, cosine, and tangent for an angle in Quadrant II.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-3",
+      "title": "Find 6 Trig Function Values of 210 Degrees",
+      "url": "https://www.youtube.com/watch?v=lCPt6bVcEBg",
+      "description": "Finding all six trig function values — sine, cosine, tangent, cosecant, secant, and cotangent — for one angle in Quadrant III.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-9",
+        "faq-10"
+      ]
+    },
+    {
+      "id": "vid-4",
+      "title": "Determine Exact Trig Function Values With the Angle in Radians",
+      "url": "https://www.youtube.com/watch?v=h7qZyY1VWEc",
+      "description": "Finding exact trig function values using the unit circle when the angle is given in radians instead of degrees.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "id": "app-1",
+      "title": "Unit Circle Explorer",
+      "url": "https://unitcircleapp.netlify.app/",
+      "description": "Interactively explore the unit circle, dragging around the angle to see the coordinates, reference angle, and quadrant update in real time.",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "app-2",
+      "title": "Unit Circle Special Triangles",
+      "url": "https://unitcirclespectriangles.netlify.app/",
+      "description": "Practice connecting the special right triangles (30-60-90 and 45-45-90) to their positions and exact values around the unit circle.",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "app-3",
+      "title": "6 Trig Values",
+      "url": "https://6trigvalues.netlify.app/",
+      "description": "Practice finding all six trigonometric function values for a given angle, reinforcing the reciprocal relationships between them.",
+      "relatedFaqs": [
+        "faq-6",
+        "faq-10"
+      ]
+    },
+    {
+      "id": "app-4",
+      "title": "Radian Degree Converter",
+      "url": "https://radiandegreetrigmaster.netlify.app/",
+      "description": "Practice converting between degrees and radians, useful for finding reference angles when an angle is given in radians.",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    }
+  ],
+  "prompts": {
+    "guided": [
+      {
+        "id": "prompt-1",
+        "title": "Practice Finding Reference Angles",
+        "prompt": "I'm learning to find reference angles. Give me an angle in a random quadrant (in degrees), and walk me through identifying which quadrant it's in and calculating its reference angle using the correct formula. Then give me three more practice angles, including at least one greater than 360 degrees, and check my work on each."
+      },
+      {
+        "id": "prompt-2",
+        "title": "Understand the Unit Circle Connection",
+        "prompt": "I'm learning why the unit circle is useful for trig. Can you explain, step by step, why the coordinates of a point on the unit circle are exactly (cos θ, sin θ)? Use a right triangle in your explanation, and connect it back to what I already know about right-triangle trig from TR3."
+      },
+      {
+        "id": "prompt-3",
+        "title": "Practice the Reference Angle + Sign Method",
+        "prompt": "I'm learning to find exact trig values using reference angles and quadrant signs. Give me an angle beyond the first quadrant and walk me through the full process: find the reference angle, look up the value, and determine the correct sign. Then give me three more practice angles of increasing difficulty and check my answers."
+      },
+      {
+        "id": "prompt-4",
+        "title": "Practice All Six Trig Functions",
+        "prompt": "I know how to find sin, cos, and tan using reference angles, but I want practice finding sec, csc, and cot too. Give me an angle, and once I've found sin, cos, and tan, walk me through finding the other three using the reciprocal relationships. Then give me more practice angles."
+      },
+      {
+        "id": "prompt-5",
+        "title": "Connect Reflections to Trig Signs",
+        "prompt": "I'm trying to understand why sine and cosine change signs in different quadrants. Can you explain this using what I learned about reflections in FN4 — specifically, how an angle in Quadrant II relates to its reference angle in Quadrant I through a horizontal reflection, and how that explains the sign change?"
+      }
+    ],
+    "open": [
+      {
+        "id": "open-1",
+        "title": "Create Your Own",
+        "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section TR5 (The Unit Circle: Reference Angles and Exact Values). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
+      }
+    ]
+  }
+}
