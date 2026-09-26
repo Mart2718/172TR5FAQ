@@ -1,0 +1,609 @@
+{
+  "section": "TR5",
+  "title": "The Unit Circle: Reference Angles and Exact Values",
+  "learningObjective": "Use reference angles, signs and definitions to determine exact values of trigonometric functions.",
+  "faqs": [
+    {
+      "id": "faq-1",
+      "category": "conceptual",
+      "question": "What is the unit circle, and why is it useful for finding trig values?",
+      "answer": "The unit circle is the circle of radius 1 centered at the origin. It's useful because for any angle θ drawn in standard position, the point where its terminal side crosses the unit circle has coordinates (cos θ, sin θ) — the x-coordinate IS the cosine, and the y-coordinate IS the sine. This turns trig values into something you can literally read off a picture, once you know where the terminal side lands.<div class=\"example-box\"><div class=\"label\">Where the Pythagorean Identity Comes From</div><p class=\"math-line\">Every point on the unit circle satisfies the circle's equation:</p><p class=\"math-line\">\\[ x^2+y^2=1 \\]</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Since \\( x=\\cos\\theta \\) and \\( y=\\sin\\theta \\) for any point on the circle, substitute directly in:</p><p class=\"math-line\">\\[ \\cos^2\\theta+\\sin^2\\theta=1 \\]</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">This is the Pythagorean identity — and now you can see it isn't a separate fact to memorize. It's just the unit circle's own equation, rewritten using sine and cosine. It's true for every single angle θ, precisely because every point (cos θ, sin θ) has to sit on a circle of radius 1.</p></div><div class=\"graph-wrap\"><svg viewBox=\"0 0 380 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><line x1=\"150\" y1=\"150\" x2=\"236.6\" y2=\"100\" stroke=\"#D4622A\" stroke-width=\"2.5\"/><circle cx=\"236.6\" cy=\"100\" r=\"5\" fill=\"#D4622A\"/><text x=\"242\" y=\"95\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">(cos &theta;, sin &theta;)</text><text x=\"175\" y=\"115\" font-size=\"11\" fill=\"#1a6b6b\" font-weight=\"600\">radius = 1</text></svg></div><p class=\"graph-caption\">The point where the terminal side meets the circle has coordinates (cos θ, sin θ).</p>"
+    },
+    {
+      "id": "faq-2",
+      "category": "conceptual",
+      "question": "What is a reference angle?",
+      "answer": "The reference angle for any angle θ is the acute angle (always between 0° and 90°) formed between θ's terminal side and the nearest part of the x-axis. It's the shortcut that lets you reuse the special-angle values you already memorized in TR4 — no matter how large or which quadrant an angle is in, its reference angle is always one of the familiar 30°, 45°, or 60° family.<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 220\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#d4d4d8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"150\" x2=\"63.4\" y2=\"100\" stroke=\"#0a3f52\" stroke-width=\"2.5\"/><path d=\"M 115,150 A 35,35 0 0 0 119.7,132.5\" fill=\"none\" stroke=\"#D4622A\" stroke-width=\"2\"/><text x=\"90\" y=\"140\" font-size=\"12\" fill=\"#D4622A\" font-weight=\"700\">30&deg;</text><text x=\"30\" y=\"90\" font-size=\"12\" fill=\"#0a3f52\" font-weight=\"700\">&theta; = 150&deg;</text></svg></div><p class=\"graph-caption\">For θ = 150° (Quadrant II), the reference angle is the 30° angle back to the nearest x-axis.</p>"
+    },
+    {
+      "id": "faq-3",
+      "category": "conceptual",
+      "question": "How do I find the reference angle for an angle in any quadrant?",
+      "answer": "The formula depends on which quadrant θ lands in, since the \"nearest x-axis\" is different each time.<div class=\"example-box\"><div class=\"label\">Reference Angle Formulas (θ in degrees)</div><p class=\"math-line\">Quadrant I: reference angle = θ</p><p class=\"math-line\">Quadrant II: reference angle = 180° &minus; θ</p><p class=\"math-line\">Quadrant III: reference angle = θ &minus; 180°</p><p class=\"math-line\">Quadrant IV: reference angle = 360° &minus; θ</p></div>"
+    },
+    {
+      "id": "faq-4",
+      "category": "conceptual",
+      "question": "Why do the six trigonometric functions have different signs in different quadrants?",
+      "answer": "Since sine and cosine come directly from the y- and x-coordinates on the unit circle (faq-1), their sign just follows whatever sign that coordinate has in that quadrant — x is negative in Quadrants II and III, y is negative in Quadrants III and IV. Every other trig function is built from sine and cosine (faq-6), so their signs are determined the same way, just inherited from whichever combination of x and y defines them."
+    },
+    {
+      "id": "faq-5",
+      "category": "conceptual",
+      "question": "How does the sign pattern for sine and cosine connect to reflections from FN4?",
+      "answer": "It's the exact same idea. An angle in Quadrant II is a horizontal reflection (across the y-axis) of its reference angle in Quadrant I — and just like f(&minus;x) flips the sign of the input, reflecting across the y-axis flips the sign of the x-coordinate, which is exactly why cosine becomes negative there. An angle in Quadrant IV is a vertical reflection (across the x-axis) of its reference angle, which flips the y-coordinate — exactly why sine becomes negative there instead. The sign rules in this section aren't a new idea to memorize from scratch; they're FN4's reflection rules, applied to the unit circle."
+    },
+    {
+      "id": "faq-6",
+      "category": "conceptual",
+      "question": "How are tangent, secant, cosecant, and cotangent defined in terms of sine and cosine (or x and y on the unit circle)?",
+      "answer": "All four remaining trig functions are built from sine and cosine — or equivalently, straight from the x and y coordinates on the unit circle.<div class=\"example-box\"><div class=\"label\">Definitions</div><p class=\"math-line\">\\( \\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = \\dfrac{y}{x} \\)</p><p class=\"math-line\">\\( \\sec\\theta = \\dfrac{1}{\\cos\\theta} = \\dfrac{1}{x} \\)</p><p class=\"math-line\">\\( \\csc\\theta = \\dfrac{1}{\\sin\\theta} = \\dfrac{1}{y} \\)</p><p class=\"math-line\">\\( \\cot\\theta = \\dfrac{\\cos\\theta}{\\sin\\theta} = \\dfrac{x}{y} \\)</p></div>"
+    },
+    {
+      "id": "faq-7",
+      "category": "sticking-points",
+      "question": "How do I determine the sign of a trig function value without a calculator?",
+      "answer": "Identify which quadrant the angle lands in, then check whether x and y are positive or negative in that quadrant (Quadrant I: both positive; Quadrant II: x negative, y positive; Quadrant III: both negative; Quadrant IV: x positive, y negative). Then apply that sign to whichever coordinate(s) the specific trig function is built from."
+    },
+    {
+      "id": "faq-8",
+      "category": "sticking-points",
+      "question": "How do I use a reference angle to find the exact value of a trig function for any angle?",
+      "answer": "Find the reference angle, look up the trig value for that reference angle using your TR4 special-angle values, then attach whatever sign is correct for the original angle's actual quadrant.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Find \\( \\sin(210°) \\).</p><p class=\"math-line\">210° is in Quadrant III: reference angle = 210°&minus;180° = 30°</p><p class=\"math-line\">\\( \\sin(30°) = \\dfrac{1}{2} \\) &nbsp;&nbsp; Quadrant III: sine is negative</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">\\( \\sin(210°) = -\\dfrac{1}{2} \\)</p></div>"
+    },
+    {
+      "id": "faq-9",
+      "category": "sticking-points",
+      "question": "How do I find sin, cos, and tan for an angle beyond the first quadrant using reference angles?",
+      "answer": "Apply the exact same three-step process from faq-8 to each function separately: find the reference angle once, then look up sin, cos, and tan at that reference angle, and attach the correct sign for each one individually — since sine and cosine can have different signs from each other in a given quadrant, don't assume they'll match.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Find \\( \\sin, \\cos, \\tan \\) at \\( \\theta = 315° \\) (Quadrant IV, reference angle 45°)</p><p class=\"math-line\">\\( \\sin(315°) = -\\dfrac{\\sqrt{2}}{2} \\) (sine negative in QIV)</p><p class=\"math-line\">\\( \\cos(315°) = \\dfrac{\\sqrt{2}}{2} \\) (cosine positive in QIV)</p><p class=\"math-line\">\\( \\tan(315°) = -1 \\) (tangent negative in QIV)</p></div>"
+    },
+    {
+      "id": "faq-10",
+      "category": "sticking-points",
+      "question": "How do I find sec, csc, and cot once I already know sin, cos, and tan for an angle?",
+      "answer": "Take the reciprocal of the matching function — sec is the reciprocal of cos, csc is the reciprocal of sin, and cot is the reciprocal of tan. The sign never changes when you take a reciprocal (flipping a fraction doesn't flip its sign), so whatever sign sin, cos, or tan had, its reciprocal keeps that same sign.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">From faq-9: \\( \\cos(315°) = \\dfrac{\\sqrt{2}}{2} \\)</p><p class=\"math-line\">\\( \\sec(315°) = \\dfrac{1}{\\cos(315°)} = \\dfrac{2}{\\sqrt{2}} = \\sqrt{2} \\)</p></div>"
+    },
+    {
+      "id": "faq-11",
+      "category": "sticking-points",
+      "question": "What's a fast way to remember which trig functions are positive in each quadrant?",
+      "answer": "A common memory trick is \"All Students Take Calculus\" — one word per quadrant, going counterclockwise starting at Quadrant I. <strong>A</strong>ll (Quadrant I: all six functions positive), <strong>S</strong>ine (Quadrant II: only sine and its reciprocal cosecant positive), <strong>T</strong>angent (Quadrant III: only tangent and its reciprocal cotangent positive), <strong>C</strong>osine (Quadrant IV: only cosine and its reciprocal secant positive).<div class=\"graph-wrap\"><svg viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"150\" x2=\"280\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"150\" y1=\"20\" x2=\"150\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"150\" r=\"100\" fill=\"none\" stroke=\"#0a3f52\" stroke-width=\"2\"/><text x=\"185\" y=\"105\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">All (+)</text><text x=\"80\" y=\"105\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Sine</text><text x=\"70\" y=\"200\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Tangent</text><text x=\"175\" y=\"200\" font-size=\"13\" fill=\"#1a6b6b\" font-weight=\"700\">Cosine</text></svg></div><p class=\"graph-caption\">\"All Students Take Calculus\" — one positive family per quadrant, going counterclockwise from Quadrant I.</p>"
+    },
+    {
+      "id": "faq-12",
+      "category": "sticking-points",
+      "question": "How do I find the reference angle when the angle is given in radians instead of degrees?",
+      "answer": "Use the same quadrant logic as faq-3, just swap in the radian equivalents of the boundary angles: π instead of 180°, and 2π instead of 360°.<div class=\"example-box\"><div class=\"label\">Reference Angle Formulas (θ in radians)</div><p class=\"math-line\">Quadrant I: reference angle = θ</p><p class=\"math-line\">Quadrant II: reference angle = π &minus; θ</p><p class=\"math-line\">Quadrant III: reference angle = θ &minus; π</p><p class=\"math-line\">Quadrant IV: reference angle = 2π &minus; θ</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Example: \\( \\theta = \\dfrac{5\\pi}{6} \\) is in Quadrant II, so reference angle \\( = \\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6} \\)</p></div>"
+    },
+    {
+      "id": "faq-13",
+      "category": "connections",
+      "question": "How do TR1–TR4 connect to what we're doing here in TR5?",
+      "answer": "Every earlier trig section is a building block for this one. TR1 gave you standard position and radians, which is how every angle here gets described. TR2's coterminal angles explain why angles that look different can land in the exact same spot on the unit circle. TR3 defined the trig functions using right triangles, and TR4 gave you the exact values for 30°, 45°, and 60° — values you're now reusing constantly as reference angles, just with a sign attached depending on the quadrant."
+    },
+    {
+      "id": "faq-14",
+      "category": "connections",
+      "question": "Why does knowing exact trig values from reference angles matter for the rest of the course?",
+      "answer": "This skill is the foundation for graphing trig functions, solving trig equations, and working with inverse trig functions — all of which require you to move fluidly between an angle and its exact trig values without a calculator. Later, when you study trig identities and equations with multiple solutions, you'll constantly be asked \"for which angles does this trig function equal this value\" — which is exactly the reference-angle-and-sign process from this section, just run in reverse."
+    }
+  ],
+  "videos": [
+    {
+      "id": "vid-1",
+      "title": "Determine the Reference Angle for a Given Angle",
+      "url": "https://www.youtube.com/watch?v=YJNSRvhd3uA",
+      "description": "Worked examples finding the reference angle for angles sketched in standard position, across all four quadrants.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "vid-2",
+      "title": "Find Sine, Cosine, and Tangent Values for 120 Degrees",
+      "url": "https://www.youtube.com/watch?v=iyZa9p8v0BU",
+      "description": "Using a reference triangle and the unit circle to find sine, cosine, and tangent for an angle in Quadrant II.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-3",
+      "title": "Find 6 Trig Function Values of 210 Degrees",
+      "url": "https://www.youtube.com/watch?v=lCPt6bVcEBg",
+      "description": "Finding all six trig function values — sine, cosine, tangent, cosecant, secant, and cotangent — for one angle in Quadrant III.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-9",
+        "faq-10"
+      ]
+    },
+    {
+      "id": "vid-4",
+      "title": "Determine Exact Trig Function Values With the Angle in Radians",
+      "url": "https://www.youtube.com/watch?v=h7qZyY1VWEc",
+      "description": "Finding exact trig function values using the unit circle when the angle is given in radians instead of degrees.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    },
+    {
+      "id": "vid-5",
+      "title": "Properties of Trig Functions: Domain, Range, and Sign in Each Quadrant",
+      "url": "https://www.youtube.com/watch?v=JPYyOcLNb_8",
+      "description": "An overview of how each trig function's sign changes across the four quadrants — the reasoning behind the ASTC pattern.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-4",
+        "faq-7",
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-6",
+      "title": "Determine the Quadrant of the Terminal Side Given Trig Function Signs",
+      "url": "https://www.youtube.com/watch?v=wlE1XM97EJc",
+      "description": "Working backward: given the signs of two trig functions, determine which quadrant the angle must be in.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-7",
+        "faq-11"
+      ]
+    },
+    {
+      "id": "vid-7",
+      "title": "Determine Reference Angles of Angles Between 0 and 360 Degrees",
+      "url": "https://youtu.be/kJToPtSd5NY",
+      "description": "More practice finding reference angles across all four quadrants in degrees.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "vid-8",
+      "title": "Determine Reference Angles of Angles Given in Radians",
+      "url": "https://youtu.be/o__sU6aMAXU",
+      "description": "Practice finding reference angles when the angle is given in radians, including negative angles.",
+      "category": "reference-angles",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    },
+    {
+      "id": "vid-9",
+      "title": "Find Trigonometric Function Values for 0 Degrees or 0 Radians",
+      "url": "https://youtu.be/Dl05CJGjO2g",
+      "description": "Finding exact trig values for a quadrantal angle (on an axis rather than inside a quadrant) — a useful edge case.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
+      ]
+    },
+    {
+      "id": "vid-10",
+      "title": "Determine Trigonometric Function Values Using the Unit Circle",
+      "url": "https://www.youtube.com/watch?v=i56P6xzsB5Y",
+      "description": "Reading trig function values directly from coordinates on the unit circle.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "vid-11",
+      "title": "Find Sine, Cosine, and Tangent Values for 225 Degrees",
+      "url": "https://youtu.be/DTsx_k198t4",
+      "description": "A worked example in Quadrant III, pairing with the existing 120° (QII) and 210° (QIII) examples for broader quadrant coverage.",
+      "category": "exact-values",
+      "relatedFaqs": [
+        "faq-8",
+        "faq-9"
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "id": "app-1",
+      "title": "Unit Circle Explorer",
+      "url": "https://unitcircleapp.netlify.app/",
+      "description": "Interactively explore the unit circle, dragging around the angle to see the coordinates, reference angle, and quadrant update in real time.",
+      "relatedFaqs": [
+        "faq-1",
+        "faq-2",
+        "faq-3"
+      ]
+    },
+    {
+      "id": "app-2",
+      "title": "Unit Circle Special Triangles",
+      "url": "https://unitcirclespectriangles.netlify.app/",
+      "description": "Practice connecting the special right triangles (30-60-90 and 45-45-90) to their positions and exact values around the unit circle.",
+      "relatedFaqs": [
+        "faq-2",
+        "faq-8"
+      ]
+    },
+    {
+      "id": "app-3",
+      "title": "6 Trig Values",
+      "url": "https://6trigvalues.netlify.app/",
+      "description": "Practice finding all six trigonometric function values for a given angle, reinforcing the reciprocal relationships between them.",
+      "relatedFaqs": [
+        "faq-6",
+        "faq-10"
+      ]
+    },
+    {
+      "id": "app-4",
+      "title": "Radian Degree Converter",
+      "url": "https://radiandegreetrigmaster.netlify.app/",
+      "description": "Practice converting between degrees and radians, useful for finding reference angles when an angle is given in radians.",
+      "relatedFaqs": [
+        "faq-12"
+      ]
+    }
+  ],
+  "prompts": {
+    "guided": [
+      {
+        "id": "prompt-1",
+        "title": "Practice Finding Reference Angles",
+        "prompt": "I'm learning to find reference angles. Give me an angle in a random quadrant (in degrees), and walk me through identifying which quadrant it's in and calculating its reference angle using the correct formula. Then give me three more practice angles, including at least one greater than 360 degrees, and check my work on each."
+      },
+      {
+        "id": "prompt-2",
+        "title": "Understand the Unit Circle Connection",
+        "prompt": "I'm learning why the unit circle is useful for trig. Can you explain, step by step, why the coordinates of a point on the unit circle are exactly (cos θ, sin θ)? Use a right triangle in your explanation, and connect it back to what I already know about right-triangle trig from TR3."
+      },
+      {
+        "id": "prompt-3",
+        "title": "Practice the Reference Angle + Sign Method",
+        "prompt": "I'm learning to find exact trig values using reference angles and quadrant signs. Give me an angle beyond the first quadrant and walk me through the full process: find the reference angle, look up the value, and determine the correct sign. Then give me three more practice angles of increasing difficulty and check my answers."
+      },
+      {
+        "id": "prompt-4",
+        "title": "Practice All Six Trig Functions",
+        "prompt": "I know how to find sin, cos, and tan using reference angles, but I want practice finding sec, csc, and cot too. Give me an angle, and once I've found sin, cos, and tan, walk me through finding the other three using the reciprocal relationships. Then give me more practice angles."
+      },
+      {
+        "id": "prompt-5",
+        "title": "Connect Reflections to Trig Signs",
+        "prompt": "I'm trying to understand why sine and cosine change signs in different quadrants. Can you explain this using what I learned about reflections in FN4 — specifically, how an angle in Quadrant II relates to its reference angle in Quadrant I through a horizontal reflection, and how that explains the sign change?"
+      }
+    ],
+    "open": [
+      {
+        "id": "open-1",
+        "title": "Create Your Own",
+        "prompt": "Use the AI tool of your choice. Start by describing what you're confused about or curious about from Section TR5 (The Unit Circle: Reference Angles and Exact Values). Ask the AI to help you explore that idea. Share what you learned and what surprised you."
+      }
+    ]
+  },
+  "paths": [
+    {
+      "id": "TR5",
+      "label": "TR5: The Unit Circle: Reference Angles and Exact Values",
+      "sectionLabel": "TR5, The Unit Circle: Reference Angles and Exact Values",
+      "intro": "Builds to the TR5 check: exact trig values at special angles, from a point on the unit circle, and from one coordinate and a quadrant.",
+      "graphs": {
+        "P1": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle theta in standard position ending at the point (-1/2, square root of 3 over 2) in Quadrant II.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"75.00\" y2=\"42.06\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.33 143.77,116.66 143.48,115.01 143.07,113.38 142.55,111.79 141.93,110.24 141.19,108.73 140.35,107.28 139.42,105.89 138.39,104.57 137.26,103.33 136.06,102.16 134.78,101.09 133.42,100.10 132.00,99.22 130.52,98.43 128.99,97.75 127.42,97.17 125.81,96.71 124.17,96.36 122.51,96.13 120.84,96.01 119.16,96.01 117.49,96.13 115.83,96.36 114.19,96.71 112.58,97.17 111.01,97.75 109.48,98.43 108.00,99.22\"/><circle class=\"g-dot\" cx=\"75.00\" cy=\"42.06\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"139.0\" y=\"91.1\" text-anchor=\"middle\">θ</text><text class=\"g-map\" style=\"font-size:12px\" x=\"85.0\" y=\"60.1\" text-anchor=\"start\">(−1/2, √3/2)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "P2": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle theta ending at the point (square root of 2 over 2, negative square root of 2 over 2) in Quadrant IV.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"183.64\" y2=\"183.64\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.31 143.76,116.63 143.47,114.96 143.05,113.32 142.52,111.72 141.89,110.15 141.14,108.63 140.28,107.17 139.33,105.78 138.28,104.45 137.14,103.20 135.91,102.04 134.61,100.96 133.23,99.98 131.79,99.10 130.29,98.32 128.74,97.65 127.14,97.09 125.51,96.64 123.85,96.31 122.17,96.10 120.48,96.00 118.79,96.03 117.11,96.17 115.44,96.44 113.79,96.82 112.17,97.31 110.59,97.92 109.06,98.64 107.58,99.46 106.17,100.39 104.82,101.41 103.55,102.52 102.36,103.73 101.26,105.01 100.25,106.37 99.34,107.79 98.53,109.28 97.83,110.82 97.24,112.40 96.76,114.02 96.39,115.67 96.15,117.35 96.02,119.03 96.01,120.72 96.12,122.41 96.35,124.09 96.70,125.74 97.16,127.37 97.74,128.96 98.42,130.51 99.22,132.00 100.11,133.43 101.11,134.80 102.20,136.10 103.37,137.31 104.63,138.44 105.97,139.47 107.38,140.41 108.85,141.25 110.37,141.98 111.94,142.61 113.56,143.12 115.20,143.51 116.87,143.79 118.55,143.96 120.24,144.00 121.93,143.92 123.61,143.73 125.27,143.41 126.91,142.98 128.51,142.44 130.07,141.79 131.58,141.02 133.03,140.15 134.42,139.19 135.73,138.12 136.97,136.97\"/><circle class=\"g-dot\" cx=\"183.64\" cy=\"183.64\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"84.9\" y=\"109.5\" text-anchor=\"middle\">θ</text><text class=\"g-map\" style=\"font-size:12px\" x=\"173.6\" y=\"173.6\" text-anchor=\"end\">(√2/2, −√2/2)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "Q1": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle alpha ending at a point in Quadrant II with x-coordinate -5/13.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"85.38\" y2=\"36.92\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.32 143.76,116.64 143.47,114.98 143.06,113.35 142.54,111.75 141.90,110.19 141.16,108.68 140.31,107.22 139.37,105.83 138.33,104.50 137.19,103.25 135.98,102.09 134.68,101.01 133.31,100.03 131.88,99.15 130.39,98.36 128.84,97.69 127.26,97.12 125.64,96.67 123.98,96.33 122.31,96.11 120.63,96.01 118.95,96.02 117.27,96.16 115.60,96.41 113.96,96.77 112.35,97.25 110.77,97.85\"/><circle class=\"g-dot\" cx=\"85.38\" cy=\"36.92\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"141.1\" y=\"92.4\" text-anchor=\"middle\">α</text><text class=\"g-map\" style=\"font-size:12px\" x=\"95.4\" y=\"54.9\" text-anchor=\"start\">(−5/13, y)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "Q2": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle alpha ending at a point in Quadrant III with y-coordinate -8/17.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"40.59\" y2=\"162.35\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.33 143.77,116.66 143.48,115.01 143.07,113.38 142.55,111.79 141.92,110.24 141.19,108.73 140.35,107.28 139.41,105.89 138.38,104.57 137.26,103.32 136.05,102.16 134.77,101.08 133.41,100.10 131.99,99.21 130.51,98.42 128.98,97.74 127.41,97.17 125.80,96.71 124.16,96.36 122.50,96.13 120.82,96.01 119.15,96.02 117.48,96.13 115.82,96.37 114.18,96.72 112.57,97.18 110.99,97.75 109.46,98.44 107.98,99.22 106.56,100.11 105.21,101.10 103.93,102.18 102.72,103.34 101.60,104.59 100.57,105.91 99.64,107.30 98.80,108.75 98.07,110.26 97.44,111.81 96.92,113.41 96.52,115.03 96.23,116.68 96.06,118.35 96.00,120.03 96.06,121.70 96.24,123.37 96.53,125.02 96.94,126.64 97.46,128.24 98.09,129.79 98.82,131.29\"/><circle class=\"g-dot\" cx=\"40.59\" cy=\"162.35\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"110.8\" y=\"87.1\" text-anchor=\"middle\">α</text><text class=\"g-map\" style=\"font-size:12px\" x=\"50.6\" y=\"152.4\" text-anchor=\"start\">(x, −8/17)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "P3": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle theta ending at the point (square root of 3 over 2, -1/2) in Quadrant IV.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"197.94\" y2=\"165.00\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.32 143.76,116.64 143.47,114.98 143.06,113.35 142.54,111.74 141.90,110.18 141.16,108.67 140.31,107.21 139.36,105.82 138.32,104.49 137.19,103.25 135.97,102.08 134.67,101.01 133.30,100.02 131.87,99.14 130.37,98.36 128.83,97.68 127.24,97.12 125.62,96.67 123.97,96.33 122.30,96.11 120.61,96.01 118.93,96.02 117.25,96.16 115.58,96.41 113.94,96.78 112.32,97.26 110.74,97.86 109.21,98.56 107.74,99.37 106.32,100.28 104.97,101.29 103.69,102.39 102.50,103.58 101.39,104.85 100.37,106.19 99.45,107.60 98.63,109.08 97.92,110.60 97.31,112.18 96.82,113.79 96.44,115.43 96.18,117.10 96.03,118.77 96.00,120.46 96.10,122.14 96.31,123.81 96.63,125.47 97.07,127.10 97.63,128.69 98.29,130.24 99.06,131.73 99.94,133.17 100.91,134.55 101.98,135.85 103.14,137.08 104.38,138.22 105.70,139.27 107.08,140.23 108.53,141.08 110.04,141.84 111.60,142.48 113.20,143.02 114.83,143.44 116.49,143.74 118.16,143.93 119.85,144.00 121.53,143.95 123.21,143.78 124.87,143.50 126.51,143.10 128.11,142.59 129.68,141.96 131.20,141.23 132.66,140.39 134.06,139.45 135.39,138.42 136.64,137.29 137.81,136.08 138.90,134.79 139.89,133.43 140.78,132.00\"/><circle class=\"g-dot\" cx=\"197.94\" cy=\"165.00\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"83.3\" y=\"114.2\" text-anchor=\"middle\">θ</text><text class=\"g-map\" style=\"font-size:12px\" x=\"187.9\" y=\"155.0\" text-anchor=\"end\">(√3/2, −1/2)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "Q3": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle alpha ending at a point in Quadrant IV with x-coordinate 20/29.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"182.07\" y2=\"185.17\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.32 143.76,116.64 143.47,114.98 143.06,113.35 142.54,111.75 141.90,110.19 141.16,108.68 140.32,107.22 139.37,105.83 138.33,104.51 137.20,103.26 135.98,102.10 134.69,101.02 133.32,100.04 131.89,99.15 130.40,98.37 128.85,97.69 127.27,97.13 125.65,96.67 124.00,96.34 122.33,96.11 120.65,96.01 118.96,96.02 117.29,96.15 115.62,96.40 113.98,96.77 112.36,97.25 110.79,97.84 109.26,98.54 107.78,99.35 106.36,100.25 105.01,101.26 103.73,102.36 102.53,103.54 101.42,104.81 100.40,106.15 99.48,107.55 98.66,109.02 97.94,110.55 97.33,112.12 96.83,113.72 96.45,115.36 96.18,117.03 96.04,118.70 96.00,120.39 96.09,122.07 96.29,123.74 96.61,125.39 97.05,127.02 97.60,128.61 98.26,130.16 99.02,131.66 99.89,133.10 100.86,134.48 101.92,135.79 103.07,137.02 104.31,138.16 105.62,139.22 107.00,140.18 108.45,141.04 109.95,141.80 111.51,142.45 113.10,142.99 114.73,143.41 116.38,143.73 118.06,143.92 119.74,144.00 121.42,143.96 123.10,143.80 124.76,143.52 126.40,143.13 128.00,142.63 129.57,142.01 131.09,141.28 132.55,140.45 133.96,139.52 135.29,138.50 136.55,137.38\"/><circle class=\"g-dot\" cx=\"182.07\" cy=\"185.17\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"85.1\" y=\"109.0\" text-anchor=\"middle\">α</text><text class=\"g-map\" style=\"font-size:12px\" x=\"172.1\" y=\"175.2\" text-anchor=\"end\">(20/29, y)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "P4": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle theta ending at the point (negative square root of 2 over 2, square root of 2 over 2) in Quadrant II.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"56.36\" y2=\"56.36\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.29 143.76,116.58 143.45,114.90 143.03,113.24 142.49,111.61 141.83,110.03 141.06,108.50 140.19,107.02 139.21,105.62 138.14,104.28 136.97,103.03 135.72,101.86 134.38,100.79 132.98,99.81 131.50,98.94 129.97,98.17 128.39,97.51 126.76,96.97 125.10,96.55 123.42,96.24 121.71,96.06 120.00,96.00 118.29,96.06 116.58,96.24 114.90,96.55 113.24,96.97 111.61,97.51 110.03,98.17 108.50,98.94 107.02,99.81 105.62,100.79 104.28,101.86 103.03,103.03\"/><circle class=\"g-dot\" cx=\"56.36\" cy=\"56.36\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"134.5\" y=\"88.9\" text-anchor=\"middle\">θ</text><text class=\"g-map\" style=\"font-size:12px\" x=\"66.4\" y=\"74.4\" text-anchor=\"start\">(−√2/2, √2/2)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "Q4": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 240 240\" width=\"240\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Unit circle with angle alpha ending at a point in Quadrant I with y-coordinate 24/25.\"><circle cx=\"120.0\" cy=\"120.0\" r=\"90\" class=\"g-line\" style=\"stroke-width:2\"/><line class=\"g-axis\" x1=\"10\" y1=\"120.0\" x2=\"230\" y2=\"120.0\"/><line class=\"g-axis\" x1=\"120.0\" y1=\"10\" x2=\"120.0\" y2=\"230\"/><line class=\"g-init\" x1=\"120.0\" y1=\"120.0\" x2=\"210.0\" y2=\"120.0\"/><line class=\"g-ray\" style=\"stroke:#b04c19\" x1=\"120.0\" y1=\"120.0\" x2=\"145.20\" y2=\"33.60\"/><polyline class=\"g-arc\" points=\"144.00,120.00 143.94,118.29 143.76,116.58 143.45,114.89 143.03,113.23 142.48,111.60 141.83,110.02 141.06,108.48 140.18,107.01 139.20,105.60 138.12,104.27 136.95,103.01 135.69,101.84 134.36,100.77 132.95,99.79 131.47,98.92 129.93,98.15 128.35,97.50 126.72,96.96\"/><circle class=\"g-dot\" cx=\"145.20\" cy=\"33.60\" r=\"4.5\"/><text class=\"g-anglelabel\" x=\"150.4\" y=\"101.2\" text-anchor=\"middle\">α</text><text class=\"g-map\" style=\"font-size:12px\" x=\"135.2\" y=\"51.6\" text-anchor=\"end\">(x, 24/25)</text><text class=\"g-label\" x=\"214.0\" y=\"132.0\">1</text></svg></div>",
+        "T45": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 260 210\" width=\"260\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"45-45-90 triangle with legs 1 and 1 and hypotenuse square root of 2.\"><polygon points=\"50,175 160.0,175 50,65.0\" class=\"g-tri\"/><polyline points=\"50,163 62,163 62,175\" class=\"g-rightbox\"/><text class=\"g-map\" x=\"105.0\" y=\"195\" text-anchor=\"middle\">1</text><text class=\"g-map\" x=\"40\" y=\"125.0\" text-anchor=\"end\">1</text><text class=\"g-map\" x=\"117.0\" y=\"114.0\">√2</text><text class=\"g-anglelabel\" x=\"121.2\" y=\"162.9\" text-anchor=\"middle\">45°</text><text class=\"g-anglelabel\" x=\"63.0\" y=\"100.4\" text-anchor=\"middle\">45°</text></svg></div>",
+        "T30": "<div class=\"graph-wrap\"><svg viewBox=\"0 0 260 210\" width=\"260\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"30-60-90 triangle: the side opposite 30 degrees is 1, the side opposite 60 degrees is square root of 3, and the hypotenuse is 2.\"><polygon points=\"50,175 160.0,175 50,111.5\" class=\"g-tri\"/><polyline points=\"50,163 62,163 62,175\" class=\"g-rightbox\"/><text class=\"g-map\" x=\"105.0\" y=\"195\" text-anchor=\"middle\">√3</text><text class=\"g-map\" x=\"40\" y=\"148.2\" text-anchor=\"end\">1</text><text class=\"g-map\" x=\"117.0\" y=\"137.2\">2</text><text class=\"g-anglelabel\" x=\"119.4\" y=\"168.1\" text-anchor=\"middle\">30°</text><text class=\"g-anglelabel\" x=\"67.0\" y=\"144.9\" text-anchor=\"middle\">60°</text></svg></div>",
+        "TT": "<div class=\"graph-row\"><figure class=\"graph-fig\"><svg viewBox=\"0 0 260 210\" width=\"260\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"45-45-90 triangle with legs 1 and 1 and hypotenuse square root of 2.\"><polygon points=\"50,175 160.0,175 50,65.0\" class=\"g-tri\"/><polyline points=\"50,163 62,163 62,175\" class=\"g-rightbox\"/><text class=\"g-map\" x=\"105.0\" y=\"195\" text-anchor=\"middle\">1</text><text class=\"g-map\" x=\"40\" y=\"125.0\" text-anchor=\"end\">1</text><text class=\"g-map\" x=\"117.0\" y=\"114.0\">√2</text><text class=\"g-anglelabel\" x=\"121.2\" y=\"162.9\" text-anchor=\"middle\">45°</text><text class=\"g-anglelabel\" x=\"63.0\" y=\"100.4\" text-anchor=\"middle\">45°</text></svg></figure><figure class=\"graph-fig\"><svg viewBox=\"0 0 260 210\" width=\"260\" style=\"max-width:100%;height:auto\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"30-60-90 triangle: the side opposite 30 degrees is 1, the side opposite 60 degrees is square root of 3, and the hypotenuse is 2.\"><polygon points=\"50,175 160.0,175 50,111.5\" class=\"g-tri\"/><polyline points=\"50,163 62,163 62,175\" class=\"g-rightbox\"/><text class=\"g-map\" x=\"105.0\" y=\"195\" text-anchor=\"middle\">√3</text><text class=\"g-map\" x=\"40\" y=\"148.2\" text-anchor=\"end\">1</text><text class=\"g-map\" x=\"117.0\" y=\"137.2\">2</text><text class=\"g-anglelabel\" x=\"119.4\" y=\"168.1\" text-anchor=\"middle\">30°</text><text class=\"g-anglelabel\" x=\"67.0\" y=\"144.9\" text-anchor=\"middle\">60°</text></svg></figure></div>"
+      },
+      "stages": [
+        {
+          "stage": "Get ready",
+          "desc": "Special right triangles first, then the unit circle and reciprocals. Skip any you already have.",
+          "stops": [
+            {
+              "id": "tr5-g0",
+              "title": "Special right triangles",
+              "target": "Know the side ratios of the two special right triangles: \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) is \\(1 : 1 : \\sqrt{2}\\), and \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) is \\(1 : \\sqrt{3} : 2\\) (short leg : long leg : hypotenuse).",
+              "cold": "(a) A \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) triangle has legs of length 3. How long is the hypotenuse?<br>(b) A \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle has a short leg of 4. Find the long leg and the hypotenuse.[[graph:TT]]",
+              "coldPlain": "(a) A 45-45-90 triangle has legs of length 3. How long is the hypotenuse? (b) A 30-60-90 triangle has a short leg of 4. Find the long leg and the hypotenuse.",
+              "coldA": "(a) Ratio \\(1 : 1 : \\sqrt{2}\\), scaled by 3: hypotenuse \\(3\\sqrt{2}\\).<br>(b) Ratio \\(1 : \\sqrt{3} : 2\\), scaled by 4: long leg \\(4\\sqrt{3}\\), hypotenuse \\(8\\).",
+              "solution": "45-45-90: the legs are equal and the hypotenuse is leg times sqrt(2): 3sqrt(2). 30-60-90: the short leg (opposite 30 degrees) is 1 part, the long leg (opposite 60 degrees) is sqrt(3) parts, the hypotenuse is 2 parts. Short leg 4 means long leg 4sqrt(3) and hypotenuse 8.",
+              "mistake": "Mixing up which leg is opposite the 30 degree angle: the shortest side is always across from the smallest angle.",
+              "again": "(a) A \\(45^\\circ\\)-\\(45^\\circ\\)-\\(90^\\circ\\) triangle has hypotenuse \\(5\\sqrt{2}\\). How long is each leg?<br>(b) A \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle has hypotenuse 10. Find both legs.",
+              "againA": "(a) Each leg is 5. (b) Half the hypotenuse is the short leg: 5. Long leg \\(5\\sqrt{3}\\).",
+              "reflect": "Which side is across from the \\(30^\\circ\\) angle, and how do you remember?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
+            },
+            {
+              "id": "tr5-g1",
+              "title": "Trig ratios from the special triangles",
+              "target": "Use SOH-CAH-TOA on the special triangles to find exact values: \\(\\sin\\theta = \\dfrac{\\text{opp}}{\\text{hyp}}\\), \\(\\cos\\theta = \\dfrac{\\text{adj}}{\\text{hyp}}\\), \\(\\tan\\theta = \\dfrac{\\text{opp}}{\\text{adj}}\\).",
+              "cold": "Use the triangles to find \\(\\sin 45^\\circ\\), \\(\\cos 45^\\circ\\), \\(\\sin 30^\\circ\\), and \\(\\cos 30^\\circ\\).[[graph:TT]]",
+              "coldPlain": "Using a 45-45-90 triangle with sides 1, 1, sqrt(2) and a 30-60-90 triangle with sides 1 (opposite 30), sqrt(3) (opposite 60), and 2 (hypotenuse), find sin 45, cos 45, sin 30, and cos 30.",
+              "coldA": "\\(\\sin 45^\\circ = \\dfrac{1}{\\sqrt{2}} = \\dfrac{\\sqrt{2}}{2}\\), \\(\\cos 45^\\circ = \\dfrac{\\sqrt{2}}{2}\\).<br>\\(\\sin 30^\\circ = \\dfrac{\\text{opp}}{\\text{hyp}} = \\dfrac{1}{2}\\), \\(\\cos 30^\\circ = \\dfrac{\\text{adj}}{\\text{hyp}} = \\dfrac{\\sqrt{3}}{2}\\).",
+              "solution": "45-45-90: from either 45 degree angle, opposite = 1, adjacent = 1, hypotenuse = sqrt(2). sin 45 = 1/sqrt(2) = sqrt(2)/2 (rationalize), cos 45 = sqrt(2)/2. 30-60-90: from the 30 degree angle, opposite = 1, adjacent = sqrt(3), hypotenuse = 2. sin 30 = 1/2, cos 30 = sqrt(3)/2.",
+              "mistake": "Using the side opposite the 60 degree angle when finding sin 30. Always stand at the angle you are asked about.",
+              "again": "Use the \\(30^\\circ\\)-\\(60^\\circ\\)-\\(90^\\circ\\) triangle to find \\(\\sin 60^\\circ\\), \\(\\cos 60^\\circ\\), and \\(\\tan 60^\\circ\\).[[graph:T30]]",
+              "againA": "From the \\(60^\\circ\\) angle: opposite \\(\\sqrt{3}\\), adjacent 1, hypotenuse 2. \\(\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}\\), \\(\\cos 60^\\circ = \\dfrac{1}{2}\\), \\(\\tan 60^\\circ = \\dfrac{\\sqrt{3}}{1} = \\sqrt{3}\\).",
+              "stretch": "Divide every side of each triangle by its hypotenuse, so the hypotenuse becomes 1. What do the legs become, and how does this connect to the unit circle?",
+              "stretchA": "The 45° triangle becomes \\(\\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{2}}{2}, 1\\); the 30°-60° triangle becomes \\(\\dfrac{1}{2}, \\dfrac{\\sqrt{3}}{2}, 1\\). With hypotenuse 1, the legs <em>are</em> the cosine and sine, so the triangle sits inside the unit circle and its corner is the point \\((\\cos\\theta, \\sin\\theta)\\).",
+              "reflect": "Why do sin 30° and cos 60° come out equal?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-g1b",
+              "title": "From triangles to the unit circle",
+              "target": "Put the special-triangle values onto the unit circle: the point for angle \\(\\theta\\) in Quadrant I is \\((\\cos\\theta, \\sin\\theta)\\).",
+              "cold": "Give the point \\((\\cos\\theta, \\sin\\theta)\\) on the unit circle for \\(\\theta = \\dfrac{\\pi}{6}\\), \\(\\dfrac{\\pi}{4}\\), and \\(\\dfrac{\\pi}{3}\\).",
+              "coldPlain": "Give the point (cos theta, sin theta) on the unit circle for theta = pi/6, pi/4, and pi/3.",
+              "coldA": "\\(\\dfrac{\\pi}{6}\\): \\(\\left(\\dfrac{\\sqrt{3}}{2}, \\dfrac{1}{2}\\right)\\). \\(\\dfrac{\\pi}{4}\\): \\(\\left(\\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{2}}{2}\\right)\\). \\(\\dfrac{\\pi}{3}\\): \\(\\left(\\dfrac{1}{2}, \\dfrac{\\sqrt{3}}{2}\\right)\\).",
+              "solution": "pi/6 (30 degrees): (sqrt(3)/2, 1/2). pi/4 (45 degrees): (sqrt(2)/2, sqrt(2)/2). pi/3 (60 degrees): (1/2, sqrt(3)/2). A check: the angle closer to the x-axis (30 degrees) has the bigger x-coordinate.",
+              "mistake": "Swapping the coordinates for 30 and 60 degrees.",
+              "again": "Which special angle in Quadrant I has \\(\\sin\\theta = \\dfrac{\\sqrt{3}}{2}\\)? Which has \\(\\cos\\theta = \\dfrac{\\sqrt{2}}{2}\\)?",
+              "againA": "\\(\\sin\\theta = \\dfrac{\\sqrt{3}}{2}\\) at \\(60^\\circ = \\dfrac{\\pi}{3}\\). \\(\\cos\\theta = \\dfrac{\\sqrt{2}}{2}\\) at \\(45^\\circ = \\dfrac{\\pi}{4}\\).",
+              "reflect": "How can you tell which of 30° or 60° has the bigger \\(y\\)-value without memorizing?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-g2",
+              "title": "Reciprocals and radicals",
+              "target": "Take reciprocals of values like \\(\\dfrac{\\sqrt{3}}{2}\\) and simplify, rationalizing the denominator: \\(\\dfrac{1}{\\sqrt{3}/2} = \\dfrac{2}{\\sqrt{3}} = \\dfrac{2\\sqrt{3}}{3}\\).",
+              "cold": "Simplify \\(\\dfrac{1}{\\;\\sqrt{3}/2\\;}\\) and \\(\\dfrac{1}{\\;\\sqrt{2}/2\\;}\\).",
+              "coldPlain": "Simplify 1/(sqrt(3)/2) and 1/(sqrt(2)/2).",
+              "coldA": "\\(\\dfrac{2}{\\sqrt{3}} = \\dfrac{2\\sqrt{3}}{3}\\) and \\(\\dfrac{2}{\\sqrt{2}} = \\sqrt{2}\\).",
+              "solution": "Dividing by a fraction flips it: 1/(sqrt(3)/2) = 2/sqrt(3). Multiply top and bottom by sqrt(3): 2sqrt(3)/3. Similarly 1/(sqrt(2)/2) = 2/sqrt(2) = 2sqrt(2)/2 = sqrt(2).",
+              "mistake": "Flipping only the 2, or leaving a radical in the denominator.",
+              "again": "Simplify \\(\\dfrac{1/2}{\\;\\sqrt{3}/2\\;}\\).",
+              "againA": "The 2s cancel: \\(\\dfrac{1}{\\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}\\).",
+              "reflect": "Why do the denominators of 2 cancel in a ratio like \\(\\dfrac{1/2}{\\sqrt{3}/2}\\)?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Learn the skills",
+          "desc": "The tools first (definitions, reference angles, signs), then the three types of question on the TR5 check.",
+          "stops": [
+            {
+              "id": "tr5-t1",
+              "title": "The six functions from a point",
+              "target": "If an angle meets the unit circle at \\((x, y)\\): \\(\\cos\\theta = x\\), \\(\\sin\\theta = y\\), \\(\\tan\\theta = \\dfrac{y}{x}\\), \\(\\sec\\theta = \\dfrac{1}{x}\\), \\(\\csc\\theta = \\dfrac{1}{y}\\), \\(\\cot\\theta = \\dfrac{x}{y}\\). Dividing by 0 means undefined.",
+              "cold": "An angle \\(\\theta\\) meets the unit circle at \\(\\left(-\\dfrac{3}{5}, \\dfrac{4}{5}\\right)\\). Find all six trig values.",
+              "coldPlain": "An angle theta meets the unit circle at (-3/5, 4/5). Find all six trig values.",
+              "coldA": "\\(\\sin\\theta = \\dfrac{4}{5}\\), \\(\\cos\\theta = -\\dfrac{3}{5}\\), \\(\\tan\\theta = -\\dfrac{4}{3}\\), \\(\\csc\\theta = \\dfrac{5}{4}\\), \\(\\sec\\theta = -\\dfrac{5}{3}\\), \\(\\cot\\theta = -\\dfrac{3}{4}\\).",
+              "solution": "x = -3/5 and y = 4/5. sin = y = 4/5; cos = x = -3/5; tan = y/x = (4/5)/(-3/5) = -4/3; csc = 1/y = 5/4; sec = 1/x = -5/3; cot = x/y = -3/4.",
+              "mistake": "Using x for sine and y for cosine, or forgetting that the reciprocal keeps the sign.",
+              "again": "\\(\\theta\\) meets the unit circle at \\(\\left(-\\dfrac{\\sqrt{2}}{2}, -\\dfrac{\\sqrt{2}}{2}\\right)\\). Find \\(\\tan\\theta\\) and \\(\\csc\\theta\\).",
+              "againA": "\\(\\tan\\theta = \\dfrac{-\\sqrt{2}/2}{-\\sqrt{2}/2} = 1\\). \\(\\csc\\theta = \\dfrac{1}{-\\sqrt{2}/2} = -\\sqrt{2}\\).",
+              "reflect": "Which three functions are reciprocals of which three?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-t2",
+              "title": "Reference angles",
+              "target": "The reference angle is the acute angle between the terminal side and the <strong>\\(x\\)-axis</strong>. It tells you which special-angle values to use.",
+              "cold": "Find the reference angle for \\(150^\\circ\\), \\(\\dfrac{5\\pi}{4}\\), and \\(300^\\circ\\).",
+              "coldPlain": "Find the reference angle for 150 degrees, 5pi/4, and 300 degrees.",
+              "coldA": "\\(150^\\circ\\): \\(180^\\circ - 150^\\circ = 30^\\circ\\). \\(\\dfrac{5\\pi}{4}\\): \\(\\dfrac{5\\pi}{4} - \\pi = \\dfrac{\\pi}{4}\\). \\(300^\\circ\\): \\(360^\\circ - 300^\\circ = 60^\\circ\\).",
+              "solution": "Measure to the nearest part of the x-axis. QII: 180 - angle (150 -> 30). QIII: angle - 180 (5pi/4 - pi = pi/4). QIV: 360 - angle (300 -> 60).",
+              "mistake": "Measuring to the y-axis instead of the x-axis.",
+              "again": "Find the reference angle for \\(\\dfrac{2\\pi}{3}\\), \\(210^\\circ\\), and \\(\\dfrac{11\\pi}{6}\\).",
+              "againA": "\\(\\dfrac{\\pi}{3}\\), \\(30^\\circ\\), and \\(\\dfrac{\\pi}{6}\\).",
+              "reflect": "Why is a reference angle always measured to the \\(x\\)-axis?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-t3",
+              "title": "Signs by quadrant",
+              "target": "Use the signs of \\(x\\) and \\(y\\) in each quadrant to get the sign of each function. In QI all are positive; in QII only \\(\\sin\\) and \\(\\csc\\); in QIII only \\(\\tan\\) and \\(\\cot\\); in QIV only \\(\\cos\\) and \\(\\sec\\).",
+              "cold": "Positive or negative? \\(\\sin 150^\\circ\\), \\(\\cos 225^\\circ\\), \\(\\tan 300^\\circ\\)",
+              "coldPlain": "Positive or negative? sin 150 degrees, cos 225 degrees, tan 300 degrees.",
+              "coldA": "\\(\\sin 150^\\circ > 0\\) (QII, \\(y > 0\\)). \\(\\cos 225^\\circ < 0\\) (QIII, \\(x < 0\\)). \\(\\tan 300^\\circ < 0\\) (QIV, \\(y < 0\\), \\(x > 0\\)).",
+              "solution": "150 is in QII where y > 0, so sine is positive. 225 is in QIII where x < 0, so cosine is negative. 300 is in QIV where y < 0 and x > 0, so tan = y/x is negative.",
+              "mistake": "Assigning the sign from the reference angle, which is always positive.",
+              "again": "Positive or negative? \\(\\sec\\dfrac{2\\pi}{3}\\), \\(\\cot 315^\\circ\\), \\(\\csc\\dfrac{5\\pi}{4}\\)",
+              "againA": "\\(\\sec\\dfrac{2\\pi}{3} < 0\\) (QII, \\(x < 0\\)). \\(\\cot 315^\\circ < 0\\) (QIV). \\(\\csc\\dfrac{5\\pi}{4} < 0\\) (QIII, \\(y < 0\\)).",
+              "reflect": "How do you get the sign of a reciprocal function like \\(\\sec\\)?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-t4",
+              "title": "Exact values at special angles",
+              "target": "Find an exact value: (1) find the reference angle, (2) find the value at the reference angle, (3) attach the sign from the quadrant.",
+              "cold": "Find the exact value of \\(\\cos\\dfrac{5\\pi}{6}\\) and \\(\\sin 225^\\circ\\).",
+              "coldPlain": "Find the exact value of cos(5pi/6) and sin(225 degrees).",
+              "coldA": "\\(\\cos\\dfrac{5\\pi}{6}\\): reference \\(\\dfrac{\\pi}{6}\\), value \\(\\dfrac{\\sqrt{3}}{2}\\), QII so negative: \\(-\\dfrac{\\sqrt{3}}{2}\\).<br>\\(\\sin 225^\\circ\\): reference \\(45^\\circ\\), value \\(\\dfrac{\\sqrt{2}}{2}\\), QIII so negative: \\(-\\dfrac{\\sqrt{2}}{2}\\).",
+              "solution": "cos(5pi/6): reference angle pi/6, cos(pi/6) = sqrt(3)/2, QII has x < 0, so -sqrt(3)/2. sin(225): reference angle 45, sin(45) = sqrt(2)/2, QIII has y < 0, so -sqrt(2)/2.",
+              "mistake": "Getting the value right but forgetting the sign.",
+              "again": "Find \\(\\tan 300^\\circ\\) and \\(\\sec\\dfrac{2\\pi}{3}\\).",
+              "againA": "\\(\\tan 300^\\circ = -\\sqrt{3}\\) (reference \\(60^\\circ\\), QIV). \\(\\sec\\dfrac{2\\pi}{3} = \\dfrac{1}{-1/2} = -2\\).",
+              "stretch": "Find \\(\\tan\\dfrac{\\pi}{2}\\), \\(\\csc\\pi\\), and \\(\\cos\\dfrac{3\\pi}{2}\\).",
+              "stretchA": "On an axis, use the point directly. \\(\\dfrac{\\pi}{2}\\) is at \\((0, 1)\\): \\(\\tan = \\dfrac{1}{0}\\), <strong>undefined</strong>. \\(\\pi\\) is at \\((-1, 0)\\): \\(\\csc = \\dfrac{1}{0}\\), <strong>undefined</strong>. \\(\\dfrac{3\\pi}{2}\\) is at \\((0, -1)\\): \\(\\cos = 0\\).",
+              "reflect": "What are the three steps, in order?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                },
+                {
+                  "label": "Apps",
+                  "tab": "tab-apps"
+                }
+              ]
+            },
+            {
+              "id": "tr5-t5",
+              "title": "Values from a unit circle point",
+              "target": "When you are given the point where \\(\\theta\\) meets the unit circle, read \\(x\\) and \\(y\\) and use the definitions.",
+              "cold": "Let \\(\\theta\\) be an angle in standard position that meets the unit circle at \\(\\left(-\\dfrac{1}{2}, \\dfrac{\\sqrt{3}}{2}\\right)\\). Find \\(\\tan\\theta\\) and \\(\\sec\\theta\\).[[graph:P1]]",
+              "coldPlain": "Let theta be an angle in standard position that meets the unit circle at (-1/2, sqrt(3)/2). Find tan(theta) and sec(theta).",
+              "coldA": "\\(\\tan\\theta = \\dfrac{y}{x} = \\dfrac{\\sqrt{3}/2}{-1/2} = -\\sqrt{3}\\). \\(\\sec\\theta = \\dfrac{1}{x} = \\dfrac{1}{-1/2} = -2\\).",
+              "solution": "x = -1/2, y = sqrt(3)/2. tan = y/x = (sqrt(3)/2)/(-1/2) = -sqrt(3). sec = 1/x = -2.",
+              "mistake": "Using y/x for cotangent, or dropping the negative from x.",
+              "again": "\\(\\theta\\) meets the unit circle at \\(\\left(\\dfrac{\\sqrt{2}}{2}, -\\dfrac{\\sqrt{2}}{2}\\right)\\). Find \\(\\csc\\theta\\) and \\(\\cot\\theta\\).[[graph:P2]]",
+              "againA": "\\(\\csc\\theta = \\dfrac{1}{-\\sqrt{2}/2} = -\\sqrt{2}\\). \\(\\cot\\theta = \\dfrac{\\sqrt{2}/2}{-\\sqrt{2}/2} = -1\\).",
+              "reflect": "Why do you not need a reference angle when you are given the point?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
+            },
+            {
+              "id": "tr5-t6",
+              "title": "Values from one coordinate and a quadrant",
+              "target": "Given one coordinate and the quadrant, find the other coordinate with \\(x^2 + y^2 = 1\\), choose its sign from the quadrant, then use the definitions.",
+              "cold": "A point on the unit circle in Quadrant II has \\(x = -\\dfrac{5}{13}\\). Let \\(\\alpha\\) be the angle that meets the circle there. Find \\(\\tan\\alpha\\).[[graph:Q1]]",
+              "coldPlain": "A point on the unit circle in Quadrant II has x = -5/13. Let alpha be the angle that meets the circle there. Find tan(alpha).",
+              "coldA": "\\(y^2 = 1 - \\dfrac{25}{169} = \\dfrac{144}{169}\\), so \\(y = \\pm\\dfrac{12}{13}\\). QII means \\(y > 0\\): \\(y = \\dfrac{12}{13}\\). \\(\\tan\\alpha = \\dfrac{12/13}{-5/13} = -\\dfrac{12}{5}\\).",
+              "solution": "Use x^2 + y^2 = 1: y^2 = 1 - 25/169 = 144/169, so y = 12/13 or -12/13. In Quadrant II, y is positive, so y = 12/13. Then tan = y/x = (12/13)/(-5/13) = -12/5.",
+              "mistake": "Choosing the wrong sign for the missing coordinate, or forgetting to square the given coordinate.",
+              "again": "A point in Quadrant III has \\(y = -\\dfrac{8}{17}\\). Find \\(\\sec\\alpha\\).[[graph:Q2]]",
+              "againA": "\\(x^2 = 1 - \\dfrac{64}{289} = \\dfrac{225}{289}\\), and QIII means \\(x < 0\\): \\(x = -\\dfrac{15}{17}\\). \\(\\sec\\alpha = -\\dfrac{17}{15}\\).",
+              "reflect": "How does the quadrant decide between the \\(+\\) and \\(-\\) square root?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "Videos",
+                  "tab": "tab-videos"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "Put it together",
+          "desc": "A practice check in the same three-part format as the TR5 CheckIt exercise.",
+          "stops": [
+            {
+              "id": "tr5-f1",
+              "title": "Practice check",
+              "target": "Find exact values at special angles, from a unit circle point, and from one coordinate and a quadrant.",
+              "cold": "<strong>Part 1.</strong> Find the exact value of (a) \\(\\sin\\dfrac{4\\pi}{3}\\) and (b) \\(\\cot 135^\\circ\\).<br><br><strong>Part 2.</strong> \\(\\theta\\) meets the unit circle at \\(\\left(\\dfrac{\\sqrt{3}}{2}, -\\dfrac{1}{2}\\right)\\). Find (c) \\(\\csc\\theta\\) and (d) \\(\\tan\\theta\\).[[graph:P3]]<strong>Part 3.</strong> A point on the unit circle in Quadrant IV has \\(x = \\dfrac{20}{29}\\). Find (e) \\(\\cot\\alpha\\).[[graph:Q3]]",
+              "coldPlain": "Part 1: exact values of (a) sin(4pi/3), (b) cot(135 degrees). Part 2: theta meets the unit circle at (sqrt(3)/2, -1/2); find (c) csc(theta), (d) tan(theta). Part 3: a point in Quadrant IV has x = 20/29; find (e) cot(alpha).",
+              "coldA": "(a) \\(-\\dfrac{\\sqrt{3}}{2}\\) (b) \\(-1\\) (c) \\(-2\\) (d) \\(\\dfrac{-1/2}{\\sqrt{3}/2} = -\\dfrac{\\sqrt{3}}{3}\\) (e) \\(y = -\\dfrac{21}{29}\\), so \\(\\cot\\alpha = \\dfrac{20/29}{-21/29} = -\\dfrac{20}{21}\\).",
+              "solution": "(a) Reference pi/3, sin = sqrt(3)/2, QIII negative: -sqrt(3)/2. (b) Reference 45, cot = 1, QII negative: -1. (c) csc = 1/y = 1/(-1/2) = -2. (d) tan = y/x = (-1/2)/(sqrt(3)/2) = -1/sqrt(3) = -sqrt(3)/3. (e) y^2 = 1 - 400/841 = 441/841, QIV so y = -21/29; cot = x/y = -20/21.",
+              "mistake": "Forgetting to rationalize -1/sqrt(3), or choosing a positive y in Quadrant IV.",
+              "again": "<strong>Part 1.</strong> (a) \\(\\sec 330^\\circ\\) (b) \\(\\tan\\dfrac{3\\pi}{2}\\)<br><br><strong>Part 2.</strong> \\(\\theta\\) meets the unit circle at \\(\\left(-\\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{2}}{2}\\right)\\). Find (c) \\(\\sec\\theta\\) and (d) \\(\\cot\\theta\\).[[graph:P4]]<strong>Part 3.</strong> A point in Quadrant I has \\(y = \\dfrac{24}{25}\\). Find (e) \\(\\csc\\alpha\\).[[graph:Q4]]",
+              "againA": "(a) \\(\\dfrac{1}{\\sqrt{3}/2} = \\dfrac{2\\sqrt{3}}{3}\\) (b) <strong>undefined</strong> (\\(\\dfrac{3\\pi}{2}\\) is at \\((0, -1)\\), so \\(\\tan = \\dfrac{-1}{0}\\)) (c) \\(-\\sqrt{2}\\) (d) \\(-1\\) (e) \\(\\csc\\alpha = \\dfrac{1}{y} = \\dfrac{25}{24}\\)",
+              "reflect": "Which of the three parts do you want to practice more?",
+              "related": [
+                {
+                  "label": "FAQs",
+                  "tab": "tab-faq"
+                },
+                {
+                  "label": "AI Prompts",
+                  "tab": "tab-prompts"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
