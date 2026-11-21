@@ -76,6 +76,12 @@
       "answer": "Use the same quadrant logic as the degree formulas, with the radian equivalents of the boundary angles: π instead of 180°, and 2π instead of 360°. These work for θ strictly between 0 and 2π and not on an axis.<div class=\"example-box\"><div class=\"label\">Reference Angle Formulas (θ in radians)</div><p class=\"math-line\">Quadrant I: reference angle = θ</p><p class=\"math-line\">Quadrant II: reference angle = π &minus; θ</p><p class=\"math-line\">Quadrant III: reference angle = θ &minus; π</p><p class=\"math-line\">Quadrant IV: reference angle = 2π &minus; θ</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">Example: \\( \\theta = \\dfrac{5\\pi}{6} \\) is in Quadrant II, so reference angle \\( = \\pi - \\dfrac{5\\pi}{6} = \\dfrac{\\pi}{6} \\)</p></div>"
     },
     {
+      "id": "faq-15",
+      "category": "sticking-points",
+      "question": "How do I find a trig value when I only know one coordinate and the quadrant?",
+      "answer": "Use \\( x^2+y^2=1 \\) to find the size of the missing coordinate, then let the quadrant choose its sign. Check first that the coordinate you were given fits the quadrant: in Quadrant II, \\( x \\) is negative and \\( y \\) is positive; in Quadrant IV, \\( x \\) is positive and \\( y \\) is negative. If it doesn't fit, the problem is inconsistent, so flag it.<div class=\"example-box\"><div class=\"label\">Worked Example</div><p class=\"math-line\">Quadrant III, \\( x=-\\dfrac{20}{29} \\). Find \\( \\tan\\alpha \\).</p><p class=\"math-line\">\\( y^2 = 1-\\dfrac{400}{841} = \\dfrac{441}{841} \\), so \\( y=\\pm\\dfrac{21}{29} \\). In Quadrant III, \\( y \\) is negative: \\( y=-\\dfrac{21}{29} \\).</p><p class=\"math-line\">\\( \\tan\\alpha = \\dfrac{y}{x} = \\dfrac{-21/29}{-20/29} = \\dfrac{21}{20} \\)</p><p class=\"math-line\" style=\"margin-top:0.5rem;\">On the CheckIt, in Quadrant II and IV problems the answer key can show the opposite sign for sine, cosecant, tangent and cotangent. The stated quadrant decides the sign.</p></div>"
+    },
+    {
       "id": "faq-13",
       "category": "connections",
       "question": "How do TR1–TR4 connect to what we're doing here in TR5?",
@@ -278,6 +284,11 @@
         "id": "prompt-5",
         "title": "Extension: Connect Reflections to Trig Signs",
         "prompt": "This is an extension, beyond my TR5 CheckIt exercise. In FN4 I learned that reflecting a graph across the y-axis changes the sign of x, and reflecting across the x-axis changes the sign of y. Don't explain the connection first. Give me the point for 30 degrees on the unit circle, and ask me to predict, using reflections, the points for 150, 210 and 330 degrees, one at a time. For each one, ask me which reflection I used and what it does to the signs of cos and sin. Then make one claim about which reflection gives the 210 degree point, and include a deliberate mistake in it (for example, saying it is only a reflection across the y-axis). Don't tell me it's wrong; I'll check it against my sketch. After I respond, check my reasoning and give me the fully corrected solution before we finish."
+      },
+      {
+        "id": "prompt-6",
+        "title": "One Coordinate and a Quadrant",
+        "prompt": "I'm practicing a Math 172 TR5 skill: finding a trig value when I know the quadrant and one coordinate of a point on the unit circle. Give me a quadrant and an x- or y-value from one of these triples: 3-4-5, 5-12-13, 8-15-17, 7-24-25, 20-21-29, 12-35-37, 9-40-41. Make sure the sign fits the quadrant. Ask me for one of sin, cos, tan, sec, csc or cot that needs the missing coordinate. Coach me with questions: first the size of the missing coordinate from x^2 + y^2 = 1, then its sign from the quadrant. Do three problems in different quadrants. Then solve one more yourself with exactly one deliberate mistake (for example, keeping the positive square root in a quadrant where that coordinate is negative). Pick a mistake that really is wrong for that problem. Don't tell me where it is. After I respond, check my reasoning and give me the fully corrected solution before we finish."
       }
     ],
     "open": [
@@ -505,8 +516,8 @@
               "coldA": "\\(\\cos\\dfrac{5\\pi}{3}\\): reference \\(\\dfrac{\\pi}{3}\\), value \\(\\dfrac{1}{2}\\), QIV so positive: \\(\\dfrac{1}{2}\\).<br>\\(\\sin 240^\\circ\\): reference \\(60^\\circ\\), value \\(\\dfrac{\\sqrt{3}}{2}\\), QIII so negative: \\(-\\dfrac{\\sqrt{3}}{2}\\).",
               "solution": "cos(5pi/3): reference angle pi/3, cos(pi/3) = 1/2, QIV has x > 0, so 1/2. sin(240): reference angle 60, sin(60) = sqrt(3)/2, QIII has y < 0, so -sqrt(3)/2.",
               "mistake": "Getting the value right but forgetting the sign.",
-              "again": "Find \\(\\tan 300^\\circ\\) and \\(\\sec\\dfrac{3\\pi}{4}\\).",
-              "againA": "\\(\\tan 300^\\circ = -\\sqrt{3}\\) (reference \\(60^\\circ\\), QIV). \\(\\sec\\dfrac{3\\pi}{4} = \\dfrac{1}{-\\sqrt{2}/2} = -\\sqrt{2}\\) (reference \\(\\dfrac{\\pi}{4}\\), QII, \\(x < 0\\)).",
+              "again": "Find \\(\\tan 300^\\circ\\), \\(\\sec\\dfrac{3\\pi}{4}\\), and \\(\\tan 90^\\circ\\).",
+              "againA": "\\(\\tan 300^\\circ = -\\sqrt{3}\\) (reference \\(60^\\circ\\), QIV). \\(\\sec\\dfrac{3\\pi}{4} = \\dfrac{1}{-\\sqrt{2}/2} = -\\sqrt{2}\\) (reference \\(\\dfrac{\\pi}{4}\\), QII, \\(x < 0\\)). \\(90^\\circ\\) is on an axis, so use its point, \\((0, 1)\\): \\(\\tan 90^\\circ = \\dfrac{1}{0}\\), <strong>undefined</strong>.",
               "stretch": "Find \\(\\sec\\dfrac{\\pi}{2}\\), \\(\\csc\\pi\\), and \\(\\cos\\dfrac{3\\pi}{2}\\).",
               "stretchA": "On an axis, use the point directly. \\(\\dfrac{\\pi}{2}\\) is at \\((0, 1)\\): \\(\\sec = \\dfrac{1}{0}\\), <strong>undefined</strong>. \\(\\pi\\) is at \\((-1, 0)\\): \\(\\csc = \\dfrac{1}{0}\\), <strong>undefined</strong>. \\(\\dfrac{3\\pi}{2}\\) is at \\((0, -1)\\): \\(\\cos = 0\\).",
               "reflect": "What are the three steps, in order?",
@@ -559,6 +570,8 @@
               "mistake": "Choosing the wrong sign for the missing coordinate, or forgetting to square the given coordinate.",
               "again": "A point on the unit circle in Quadrant III has \\(y = -\\dfrac{40}{41}\\). Let \\(\\alpha\\) be its angle. Find \\(\\sec\\alpha\\).[[graph:Q2]]",
               "againA": "\\(x^2 = 1 - \\dfrac{1600}{1681} = \\dfrac{81}{1681}\\), and QIII means \\(x < 0\\): \\(x = -\\dfrac{9}{41}\\). \\(\\sec\\alpha = \\dfrac{1}{x} = -\\dfrac{41}{9}\\).",
+              "stretch": "A CheckIt problem says: a point on the unit circle lies in Quadrant II and has \\(y = -\\dfrac{4}{5}\\). Find \\(\\tan\\alpha\\). What should you do?",
+              "stretchA": "Flag it. In Quadrant II, \\(y\\) is positive, so \\(y = -\\dfrac{4}{5}\\) cannot be in Quadrant II: the problem contradicts itself. Trusting the quadrant gives \\(y = \\dfrac{4}{5}\\), \\(x = -\\dfrac{3}{5}\\) and \\(\\tan\\alpha = -\\dfrac{4}{3}\\); trusting \\(y\\) puts the point in Quadrant III, with \\(\\tan\\alpha = \\dfrac{4}{3}\\). Say which one you used and why.",
               "reflect": "How does the quadrant decide between the \\(+\\) and \\(-\\) square root?",
               "related": [
                 {
