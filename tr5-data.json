@@ -214,6 +214,35 @@
         "faq-8",
         "faq-9"
       ]
+    },
+    {
+      "id": "vid-12",
+      "title": "Find the Sine, Cosine and Tangent Function Values Given a Point on the Unit Circle: Fractions",
+      "url": "https://youtu.be/BQuz1zJSTD8",
+      "description": "Reads sine, cosine, and tangent from a point (x, y) on the unit circle: cos θ = x, sin θ = y, tan θ = y/x.",
+      "category": "exact-values",
+      "relatedFaqs": []
+    },
+    {
+      "id": "vid-13",
+      "title": "Ex: Find a Point on the Unit Circle Given One Coordinate",
+      "url": "https://youtu.be/egtrsPZ7THQ",
+      "description": "Given one coordinate of a point on the unit circle and its quadrant, uses x² + y² = 1 to find the other coordinate and its sign.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-15"
+      ]
+    },
+    {
+      "id": "vid-14",
+      "title": "Ex: Find Trig Function Values Given the Cosine Value and Quadrant",
+      "url": "https://youtu.be/p3jDoMuqJHk",
+      "description": "Given the cosine value and the quadrant, finds the other coordinate and then all six trig function values.",
+      "category": "quadrant-signs",
+      "relatedFaqs": [
+        "faq-15",
+        "faq-6"
+      ]
     }
   ],
   "apps": [
